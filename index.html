@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Morrowind Stats Calculator</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h2>Enter your attributes</h2>
+	<form>
+		<ul id="attributes">
+			<li>Endurance:<input type="number" name="end"></li>
+			<li>Strength:<input type="number" name="str"></li>
+			<li>Intelligence:<input type="number" name="int"></li>
+			<li>Willpower:<input type="number" name="wil"></li>
+			<li>Agility:<input type="number" name="agi"></li>
+			<li>Personality:<input type="number" name="per"></li>
+			<li>Speed:<input type="number" name="speed"></li>
+			<li>Luck:<input type="number" name="luck"></li>
+		</ul>
+		<div class="race-selection">
+		<label>Select your race</label>
+		<select name="race" value="Select your race">
+			<option value="Altmer">Altmer</option>
+			<option value="Breton">Breton</option>
+			<option value="other">Other</option>
+		</select>
+		</div>
+		<br>
+		<br>
+		<div class="submit-container">
+			<button type="submit" id="startvalues">Show starting values</button>
+		</div>
+	</form>
+	<ul id="starting-values">
+		<li>Health:</li>
+		<li>Magicka:</li>
+		<li>Fatigue:</li>
+		<li>Max Encumbrance:</li>
+	</ul>
+	<script type="text/javascript" src="main.js"></script> 
+</body>
+</html>
