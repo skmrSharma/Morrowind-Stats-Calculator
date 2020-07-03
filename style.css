@@ -41,3 +41,31 @@ button#startvalues:hover {
 	line-height: 28px;
 	letter-spacing: 0.043em;
 }
+
+.alchemy {
+	letter-spacing: 0.043em;
+	font-size: 18px;
+}
+
+.fatigue {
+	display: flex;
+	width: 25%;
+	justify-content: space-around;
+}
+
+/*
+.fatigue label#current-fatigue {
+	flex-direction: column;
+}
+
+.fatigue label#max-fatigue {
+	flex-direction: column;
+}
+*/
+
+.fatigue input {
+	/*position: relative;
+	top: 3em;
+	right: 5em;*/
+	width: 70px;
+}
