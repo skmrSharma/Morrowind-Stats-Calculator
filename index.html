@@ -46,12 +46,50 @@
 			<br>
 			<label>Fatigue:</label>
 			<div class="fatigue">
-				<label id="current-fatigue">Current<input type="number" name="current-fatigue"></label>
+				<label id="current-fatigue">Current<input type="number" name="current-fatigue" value="1"></label>
 				<span>/</span>
-				<label id="max-fatigue">Max<input type="number" name="max-fatigue"></label>
+				<label id="max-fatigue">Max<input type="number" name="max-fatigue" value="1"></label>
 			</div>
 			<br>
 			<input type="submit" name="submit-alchemy" value="OK"><br>
+		</form>
+		<p></p>
+	</div>
+	<br>
+	<button id = "hit-button">Calculate hit rate</button>
+	<div class="hit-rate">
+		<form id="hit-rate-form">
+			<label>Weapon Skill:<input type="number" name="weapon-skill"></label>
+			<br>
+			<label>Fatigue:</label>
+			<div class="fatigue">
+				<label id="current-fatigue">Current<input type="number" name="current-fatigue" value="1"></label>
+				<span>/</span>
+				<label id="max-fatigue">Max<input type="number" name="max-fatigue" value="1"></label>
+			</div>
+			<br>
+			<label>Fortify Attack magnitude(for e.g., 10 if you chose Warrior birthsign)     <input type="number" name="fortify-attack" value=0></label>
+			<br>
+			<label>Blind effects (if any)     <input type="number" name="blind-effects" value=0></label>
+			<br>
+			<br>
+			<input type="submit" name="submit-hitRate" value="Show Hit Rate"><br>
+		</form>
+		<p></p>
+	</div>
+	<button id = "evasion">Calculate evasion chance</button>
+	<div class="evasion-chance">
+		<form id="evasion-chance-form">
+			<label>Sanctuary Magnitude: <input type="number" name="sanctuary-effects" value=0></label>
+			<br>
+			<label>Fatigue:</label>
+			<div class="fatigue">
+				<label id="current-fatigue">Current<input type="number" name="current-fatigue" value="1"></label>
+				<span>/</span>
+				<label id="max-fatigue">Max<input type="number" name="max-fatigue" value="1"></label>
+			</div>
+			<br>
+			<input type="submit" name="submit-evasion" value="Show evasion chance"><br>
 		</form>
 		<p></p>
 	</div>

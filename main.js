@@ -48,6 +48,48 @@ $(".alchemy form").submit(function(){
 		return false;
 	}
 	var alcSuccessRate = (alcSkill + int/5 + luck/10) * (0.75 + 0.5*fatigueRatio);
-	$(".alchemy p").html("Alchemy Success Rate = "+alcSuccessRate);
+	$(".alchemy p").html("Alchemy Success Rate = "+alcSuccessRate+" %");
+	return false;
+});
+
+$(".hit-rate").hide();
+
+$("#hit-button").click(function(){
+	$(".hit-rate").toggle();
+});
+
+$("#hit-rate-form").submit(function(){
+	var weaponSkill = +($("input[name='weapon-skill']").val());
+	var agi = +($("input[name='agi']").val());
+	var luck = +($("input[name='luck']").val());
+	var fatigueRatio = +($(".hit-rate input[name='current-fatigue']").val())/+($(".hit-rate input[name='max-fatigue']").val());
+	if(fatigueRatio > 1){
+		alert("Error: Current fatigue should be less than maximum fatigue");
+		return false;
+	}
+	var fortAttack = +($("input[name='fortify-attack']").val());
+	var blindMag = +($("input[name='blind-effects']").val());
+	var hitRate = (weaponSkill + agi/5 + luck/10) * (0.75 + 0.5*fatigueRatio) + fortAttack - blindMag;
+	$(".hit-rate p").html("Weapon Hit Rate = "+hitRate+" %<p>Chance to hit = Your hit rate - Opponent's evasion</p>");
+	return false;
+});
+
+$(".evasion-chance").hide();
+
+$("#evasion").click(function(){
+	$(".evasion-chance").toggle();
+});
+
+$("#evasion-chance-form").submit(function(){
+	var agi = +($("input[name='agi']").val());
+	var luck = +($("input[name='luck']").val());
+	var fatigueRatio = +($(".evasion-chance input[name='current-fatigue']").val())/+($(".evasion-chance input[name='max-fatigue']").val());
+	if(fatigueRatio > 1){
+		alert("Error: Current fatigue should be less than maximum fatigue");
+		return false;
+	}
+	var sancMag = +($("input[name='sanctuary-effects']").val());
+	var evadeChance = (agi/5 + luck/10) * (0.75 + 0.5*fatigueRatio) + sancMag;
+	$(".evasion-chance p").html("Your Evasion Chance in combat = "+evadeChance+" %");
 	return false;
 });

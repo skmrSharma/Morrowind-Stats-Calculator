@@ -69,3 +69,27 @@ button#startvalues:hover {
 	right: 5em;*/
 	width: 70px;
 }
+
+.hit-rate {
+	letter-spacing: 0.043em;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.hit-rate input {
+	width: 70px;
+}
+
+.hit-rate input[type='submit'] {
+	width: 150px;
+}
+
+button {
+	font-size: 18px;
+}
+
+.evasion-chance {
+	letter-spacing: 0.043em;
+	font-size: 18px;
+	line-height: 22px;
+}
